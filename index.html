@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>YOV</title>
+	<script
+	src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="C:\Users\Виталик\Desktop\get-post\font-awesome-4.7.0\css\font-awesome.min.css">
+</head>
+<body class="flex-container">
+	<header class="main-header">
+		<h1>YOV</h1>
+		<p>your online vocabulary</p>
+	</header>
+	
+	<div class="words-input">
+		<h2>Add a new word</h2>
+		<form class="flex-container">
+			<div class="form-wrap flex-container">
+				<div>
+					<p><img src="flag-rus.jpg">Russian</p>
+					<label for="rus"><input type="text" name="rus" id="rus"></label>
+				</div>
+				<div>
+					<p><img src="flag-eng.jpg" class="img-eng">English</p>
+					<label for="eng"><input type="text" name="eng" id="eng"></label>
+				</div>
+				<div>
+					<p><img src="flag-dut.jpg" class="img-dut">Dutch</p>
+					<label for="dut"><input type="text" name="dut" id="dut"></label>
+				</div>
+			</div>
+			<button class="send" disabled="true">Remember</button>
+		</form>
+	</div>
+
+	<div class="words-show flex-container">
+		<div class="controls flex-container">
+			<div class="controls-left">
+				<button class="show">Show</button>
+				<label for="showLimit">
+					<select id="showLimit">
+						<option value="5">5</option>
+						<option value="10" selected="true">10</option>
+						<option value="20">20</option>
+					</select>
+				</label>
+				
+				<label for="searcher" class="searcher">
+					<button class="show go-to">Go to</button>
+					<input class="page-number" type="number" id="searcher" min="1">
+				</label>
+			</div>
+				
+			<label for="search-word" class="controls-right">
+				<button class="search-word">Search for</button>
+				<input type="text" id="search-word">
+			</label>
+		</div>
+
+		<table class="table-of-words">
+			<thead>
+			     <tr>
+			       <th>Russian</th>
+			       <th>English</th>
+			       <th>Dutch</th>
+			     </tr>
+			</thead>
+			<tbody class="show-table">
+			</tbody>
+		</table>	
+
+		<div class="pagination">
+		</div>
+	</div>	
+
+	<div class="words-train flex-container">
+		<h2>Train your skills!</h2>
+		<div class="controls-wrap flex-container">
+			<div class="language-wrap">
+				<p>Select language</p><select id="language">
+					<option value="rus" selected="selected">Russian</option>
+					<option value="eng">English</option>
+					<option value="dut">Dutch</option>
+				</select>
+			</div>
+			<button class="genWord">Generate a word</button>
+		</div>
+
+		<div class="bubble">
+			<img src="bubble.png">
+			<p class="message">Wanna try?</p>
+		</div>
+		
+
+		<table class="table-for-check">
+			<thead>
+		      <tr>
+		        <th><img src="flag-rus.jpg">Russian</th>
+		        <th><img src="flag-eng.jpg">English</th>
+		        <th><img src="flag-dut.jpg">Dutch</th>
+		      </tr>
+		      <tbody class="train-table">
+		      	<tr>
+		      		<td><input type="text" id="tr-rus"><i class="fa fa-angle-right arrow-left"></i></td>
+		      		<td><input type="text" id="tr-eng"><i class="fa fa-angle-right arrow-right"></i></td>
+		      		<td><input type="text" id="tr-dut"></td>
+		      	</tr>
+		      </tbody>
+		</table>
+		<div class="check-wrap"><button class="check">Check me!</button></div>
+	</div>
+
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>

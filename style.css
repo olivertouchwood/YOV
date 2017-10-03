@@ -1,0 +1,407 @@
+.wrong {
+	background-color: #ff0707;
+}
+
+.right {
+	background-color: #c6f5a5;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: auto;
+	padding: 0 10px;
+	max-width: 900px;
+	flex-wrap: wrap;
+	font-family: 'Raleway', sans-serif;
+	font-size: 16px;
+}
+
+h1 {
+	font-size: 70px;
+	font-weight: 300;
+	line-height: 70px;
+}
+
+h2 {
+	width: 100%;
+	font-size: 30px;
+	font-weight: 500;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+button {
+	font-family: 'Raleway', sans-serif;
+	font-size: 18px;
+	color: white;
+	cursor: pointer;
+	outline: none;
+}
+
+input {
+	outline: none;
+}
+
+select {
+	outline: none;
+}
+
+.flex-container {
+	display: flex;
+}
+
+/*Header*/
+
+.main-header {
+	width: 100%;
+	padding: 30px 0;
+}
+
+.main-header p {
+	font-size: 13px;
+	font-weight: 100;
+	line-height: 13px;
+}
+
+/*Add a word*/
+
+.words-input {
+	width: 100%;
+	padding: 20px 40px;
+	background-color: #ccdceb;
+	border-radius: 5px;
+	margin-bottom: 50px;
+}
+
+.words-input p {
+	color: #576474;
+	margin-bottom: 10px;
+	position: relative;
+	padding-left: 26px;
+}
+
+.words-input img {
+	position: absolute;
+	left: 0;
+	top: 5px;
+	width: 16px;
+	height: 11px;	
+}
+
+form {
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.form-wrap {
+	justify-content: space-between;
+	width: 100%;
+	margin-bottom: 30px;
+}
+
+.words-input input {
+	min-width: 200px;
+	padding: 10px 15px;
+	border-radius: 5px;
+	border: none;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+}
+
+.send {
+	width: 140px;
+	height: 45px;
+	border: none;
+	border-radius: 5px;
+	background-color: #f59764;
+	box-shadow: 2px 2px 0px rgba(0,0,0,0.2)
+}
+
+/*Table of words*/
+
+.words-show {
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.words-show .controls {
+	width: 100%;
+	justify-content: space-between;
+	margin-bottom: 20px;
+	position: relative;
+}
+
+.controls-left {
+	position: relative;
+}
+
+.show {
+	width: 60px;
+	height: 30px;
+	border: none;
+	border-radius: 5px 0 0 5px;
+	background-color: #f59764;
+	margin-right: 50px;
+}
+
+#showLimit {
+	width: 50px;
+	height: 30px;
+	position: absolute;
+	left: 60px;
+	border-color: #f59764;
+	border-radius: 0 5px 5px 0;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	padding-left: 5px;
+}
+
+.words-show table {
+	width: 100%;
+}
+
+.go-to {
+	margin-right: 0;
+}
+
+.page-number {
+	width: 50px;
+	height: 30px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	line-height: 16px;
+	box-sizing: border-box;
+	border: 1px solid #f59764;
+	border-radius: 0 5px 5px 0;
+	padding-left: 5px;
+	position: absolute;
+	top: -6px;
+	left: 60px;
+}
+
+.searcher {
+	position: relative;
+}
+
+.search-word {
+	width: 95px;
+	height: 30px;
+	font-family: 'Raleway', sans-serif;
+	font-size: 16px;
+	line-height: 16px;
+	background-color: #f59764;
+	border-radius: 5px 0 0 5px;
+	border: none;
+	position: absolute;
+	right: 150px;
+}
+
+#search-word {
+	width: 150px;
+	height: 30px;
+	border: 1px solid #f59764;
+	border-radius: 0 5px 5px 0;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	padding-left: 5px;
+	box-sizing: border-box;
+}
+
+.table-of-words {
+	border-collapse: collapse;
+	box-sizing: border-box;
+	margin-bottom: 30px;
+}
+
+.table-of-words th {
+	height: 40px;
+	width: 33.3%;
+	background-color: #ccdceb;
+	border-radius: 5px;
+	font-size: 18px;
+	font-weight: 300;
+	color: #576474;
+}
+
+.table-of-words th:first-child {
+	border-radius: 5px 0 0 0;
+	border-right: 1px solid white;
+}
+
+.table-of-words th:nth-child(2) {
+	border-radius: 0;
+}
+
+.table-of-words th:last-child {
+	border-radius: 0 5px 0 0;
+	border-left: 1px solid white;
+}
+
+.table-of-words td {
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+	padding: 10px;
+	border-bottom: 1px solid #ccdceb;
+}
+
+.pagination {
+	margin: auto;
+}
+
+.pagination a {
+	color: white;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+    float: left;
+    padding: 6px 12px;
+    text-decoration: none;
+	background-color: #f59764;
+    margin-right: 7px;
+    margin-bottom: 40px;
+    border-radius: 5px;
+}
+
+.pagination a:hover {
+	background-color: #f37020;
+}
+
+.pagination a.active {
+ 	background-color: #f37020;
+ }
+
+/*Training zone*/
+
+.words-train {
+	width: 100%;
+	flex-wrap: wrap;
+	background-color: #f59764;
+	border-radius: 5px;
+	padding: 20px 40px;	
+	margin-bottom: 50px;
+	justify-content: center;
+}
+
+.words-train h2 {
+	color: #f7f6a6;
+}
+
+.controls-wrap {
+	flex-direction: column;
+	width: 50%;
+}
+
+.bubble {
+	width: 50%;
+	position: relative;
+}
+
+.bubble img {
+	position: absolute;
+	right: 110px;
+}
+
+.message {
+	position: absolute;
+	right: 130px;
+	top: 30px;
+	font-size: 18px;
+	text-transform: uppercase;
+}
+
+.message-wrong {
+	right: 140px;
+}
+
+.controls-wrap p {
+	margin-right: 10px;
+	color: white;
+	display: inline-block;
+}
+
+#language {
+	width: 120px;
+	height: 30px;
+	padding-left: 5px;
+	border-radius: 5px;
+	border: none;
+	font-family: 'Raleway', sans-serif;
+	font-size: 16px;
+	line-height: 16px;
+	margin-bottom: 15px;
+}
+
+.genWord {
+	width: 250px;
+	height: 45px;
+	border-radius: 5px;
+	border: none;
+	background-color: #f37020;
+	margin-bottom: 30px;
+	box-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+}
+
+.table-for-check {
+	width: 100%;
+	margin-bottom: 30px;
+}
+
+.table-for-check th {
+	font-size: 18px;
+	font-weight: 300;
+	color: #f7f6a6;
+	text-align: left;
+}
+
+.table-for-check img {
+	margin-right: 10px;
+}
+
+.train-table td {
+	position: relative;
+}
+
+.train-table input {
+	min-width: 200px;
+	padding: 10px 15px;
+	border-radius: 5px;
+	border: none;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+}
+
+.train-table i {
+	font-size: 30px;
+	color: #f7f6a6;
+	margin-left: 24px;
+}
+
+.check {
+	width: 140px;
+	height: 45px;
+	border-radius: 5px;
+	border: none;
+	background-color: #f37020;
+	box-shadow: 2px 2px 0px rgba(0,0,0,0.2)
+}
+
+.words-input button:hover, .words-show button:hover, .words-train button:hover {
+	background-color: #ea5e2d;
+}
+
+.words-input button:active, .words-train button:active {
+	box-shadow: none;
+}
+
+footer {
+	width: 100%;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+footer p {
+	font-size: 14px;
+}
